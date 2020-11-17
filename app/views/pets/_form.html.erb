@@ -1,0 +1,11 @@
+<div class="form-group">
+<%= simple_form_for(@pet) do |f| %>
+<%= f.input :name %>
+<%= f.input :address %>
+<%= f.input :species, collection: ['cat', 'dog', 'bird', 'frog'] %>
+<%= f.input :found_on %>
+<%= f.submit class: "btn btn-info" %>
+
+
+<% end %>
+</div>

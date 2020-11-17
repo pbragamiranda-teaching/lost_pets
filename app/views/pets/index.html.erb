@@ -1,0 +1,15 @@
+<h1>Check all the Lost Pets</h1>
+
+<%= link_to "Create a Listing", pets_new_path %>
+
+<ul style="list-style: none">
+
+  <% @pets.each do |pet| %>
+
+  <li>
+    <%= link_to pet.name, pet_path(pet) %> - found <%= (Date.today - pet.found_on).to_i %> days ago
+  </li>
+
+  <% end %>
+
+</ul>
